@@ -25,20 +25,64 @@ class ProfileWidget extends StatelessWidget {
           Radius.circular(22),
         ),
       ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: size.width * 0.02),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            CircleAvatar(
-              backgroundImage: AssetImage(
-                'assets/pana_miguel.jpg',
-              ),
+      child: isExpanded
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Expanded(
+                  flex: 1,
+                  child: CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage(
+                      'assets/pana_miguel.jpg',
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 15,
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Jesus Avendaño',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                        maxLines: 1,
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        '@Jesus1397',
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                        maxLines: 1,
+                      )
+                    ],
+                  ),
+                ),
+                const Expanded(
+                  flex: 1,
+                  child: Icon(Icons.logout, color: Colors.white),
+                ),
+              ],
+            )
+          : Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                CircleAvatar(
+                  backgroundImage: AssetImage(
+                    'assets/pana_miguel.jpg',
+                  ),
+                ),
+                Icon(Icons.logout, color: Colors.white),
+              ],
             ),
-            Icon(Icons.logout, color: Colors.white),
-          ],
-        ),
-      ),
     );
   }
 }

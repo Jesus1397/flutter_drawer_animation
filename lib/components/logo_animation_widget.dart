@@ -33,12 +33,12 @@ class LogoAnimationWidget extends StatelessWidget {
                   flex: 4,
                   child: Text(
                     'FlyCompany',
+                    maxLines: 1,
                     style: TextStyle(
                       fontSize: isExpanded ? 18 : 0.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
-                    maxLines: 1,
                   ),
                 ),
               if (isExpanded)

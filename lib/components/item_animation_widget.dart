@@ -27,9 +27,9 @@ class ItemAnimationWidget extends StatelessWidget {
       children: [
         Icon(icon, color: Colors.white),
         AnimatedContainer(
+          duration: duration,
           alignment: Alignment.centerLeft,
           padding: const EdgeInsets.only(left: 30),
-          duration: duration,
           width: isExpanded ? MediaQuery.of(context).size.width * 0.60 : 0.0,
           height: 16,
           child: AnimatedOpacity(

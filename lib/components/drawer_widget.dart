@@ -36,7 +36,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
             child: LogoAnimationWidget(
-                duration: duration, text: 'FlyCompany', isExpanded: isExpanded),
+              duration: duration,
+              text: 'FlyCompany',
+              isExpanded: isExpanded,
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 15),
